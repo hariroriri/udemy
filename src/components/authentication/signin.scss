@@ -1,0 +1,199 @@
+// src/components/Auth.scss
+
+.sign-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.signin-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.signup-image-link{
+    font-weight: 600;
+}
+
+.signin-form,
+.signin-image {
+    flex: 1;
+    padding: 40px;
+    min-width: 300px;
+    box-sizing: border-box; // Ensures padding and border are included in width calculation
+}
+
+.signin-image {
+    order: -1; // Move image to the left side
+    text-align: center;
+    margin-top: 0; // Remove top margin to align properly
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    &-link {
+        display: inline-block;
+        margin-top: 20px;
+        color: #6c63ff;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// .signin-form {
+//     border-left: 1px solid #ddd;
+// }
+
+.form-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 900;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 15px;
+        padding-left: 50px; // Space for the icon
+        border: 1px solid #ddd; // Add border to prevent stretching
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box; // Ensure padding and border are included in width calculation
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    label {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        font-size: 1.2rem; // Adjusted size for better appearance
+        color: #333;
+    }
+
+    .password-toggle {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #333;
+    }
+}
+
+.form-button {
+    text-align: left;
+}
+
+.form-submit {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.social-login {
+    margin-top: 20px;
+
+    .social-label {
+        font-size: 0.9rem;
+        color: #333;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .socials {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+
+            &:hover {
+                color: #6c63ff;
+            }
+        }
+    }
+}
+
+.agree-term {
+    margin-right: 10px; // Adjust spacing between checkbox and label
+
+    + .label-agree-term span {
+        background: #6c63ff; // Background color when checked
+        border-color: #6c63ff; // Border color when checked
+    }
+}
+
+.label-agree-term {
+    font-size: 0.9rem; // Adjust font size
+    color: #333;
+    cursor: pointer;
+
+    span {
+        display: inline-block;
+        width: 1rem; // Adjust the size of the custom checkbox
+        height: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        background: #fff;
+        margin-right: 5px; // Adjust spacing between custom checkbox and text
+        vertical-align: middle;
+    }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+    .signin-content {
+        flex-direction: column;
+    }
+
+    .signin-form {
+        border-left: none;
+        border-bottom: 1px solid #ddd;
+        padding: 20px;
+    }
+
+    .signin-image {
+        padding: 20px;
+    }
+}

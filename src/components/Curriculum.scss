@@ -1,0 +1,70 @@
+$font-family: Arial, sans-serif;
+$section-header-bg: #f9f9f9;
+$section-header-hover-bg: #e0e0e0;
+$border-color: #ddd;
+$arrow-color: #333;
+$loading-spinner-font-size: 1.2em;
+$error-message-color: red;
+
+.curriculum {
+  font-family: $font-family;
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: $section-header-bg;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $section-header-hover-bg;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .arrow {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 7px solid $arrow-color;
+      transition: transform 0.3s ease, border-top-color 0.3s ease;
+
+      &.arrow-up {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .video-player {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    iframe,
+    video {
+      width: 100%;
+      border: none;
+    }
+
+    .loading-spinner,
+    .error-message {
+      text-align: center;
+      padding: 10px;
+      font-size: $loading-spinner-font-size;
+    }
+
+    .error-message {
+      color: $error-message-color;
+    }
+  }
+}

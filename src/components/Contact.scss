@@ -1,0 +1,305 @@
+/* Base styles */
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 70px;
+    margin-top: 50px;
+  
+    &-head {
+      height: 350px;
+      width: 100%;
+      background-color: aquamarine;
+    }
+  
+    &-description {
+      padding-top: 8%;
+      padding-bottom: 100px;
+      text-align: center;
+  
+      h1 {
+        font-size: 50px;
+        font-weight: bold;
+      }
+    }
+  
+    &-content {
+      flex: 1;
+      margin-right: 50px;
+  
+      h1 {
+        font-size: 46px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+  
+      .con-para {
+        font-size: 22px;
+        color: gray;
+      }
+  
+      .con-para-head {
+        font-size: 30px;
+        font-weight: 400;
+        margin-top: 40px;
+      }
+    }
+  
+    &-card {
+      flex: 1;
+      border: 1px solid whitesmoke;
+      border-radius: 8px;
+      padding: 60px 70px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+  
+      .get-in-touch {
+        font-size: 35px;
+        font-weight: 600;
+      }
+  
+      .get-in-des {
+        font-size: 20px;
+        color: gray;
+      }
+  
+      p {
+        margin-bottom: 12px;
+      }
+  
+      .form-group {
+        margin-bottom: 12px;
+      }
+  
+      .input, .textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 6px;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        border-radius: 0;
+        transition: border-color 0.3s ease-in-out;
+        font-size: 20px;
+  
+        &:focus {
+          border-bottom: 2px solid #4CAF50;
+          outline: none;
+        }
+      }
+  
+      .textarea {
+        height: 100px;
+      }
+  
+      ::placeholder {
+        font-size: 20px;
+        padding-bottom: 10px;
+        color: #888;
+      }
+  
+      .button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+      }
+  
+      .error {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    }
+  }
+  
+  /* Social Media Icons */
+  .social-media {
+    display: flex;
+    justify-content: left;
+    margin-top: 30px;
+  
+    .social-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #f0f0f0;
+      color: #555;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+  
+      &:hover {
+        background-color: #4CAF50;
+        color: white;
+      }
+    }
+  }
+  
+  /* Responsive styles */
+  
+  @media (max-width: 1200px) {
+    .contact {
+      padding: 50px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .contact {
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+  
+      &-content {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+  
+      &-card {
+        width: 100%;
+        padding: 30px;
+      }
+  
+      &-description h1 {
+        font-size: 40px;
+      }
+  
+      &-content h1 {
+        font-size: 36px;
+      }
+  
+      .con-para {
+        font-size: 20px;
+      }
+  
+      .con-para-head {
+        font-size: 28px;
+      }
+  
+      .get-in-touch {
+        font-size: 30px;
+      }
+  
+      .get-in-des {
+        font-size: 18px;
+      }
+  
+      .input, .textarea {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact-head {
+      height: auto;
+    }
+  
+    .contact-description h1 {
+      font-size: 32px;
+    }
+  
+    .contact-content h1 {
+      font-size: 30px;
+    }
+  
+    .con-para {
+      font-size: 18px;
+    }
+  
+    .con-para-head {
+      font-size: 24px;
+    }
+  
+    .get-in-touch {
+      font-size: 28px;
+    }
+  
+    .get-in-des {
+      font-size: 16px;
+    }
+  
+    .input, .textarea {
+      font-size: 16px;
+    }
+  
+    .social-media {
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+    }
+  
+    .social-icon {
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      margin: 10px 0;
+    }
+  
+    .button {
+      width: 100%;
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .contact-head {
+      height: 150px;
+    }
+  
+    .contact-description h1 {
+      font-size: 28px;
+    }
+  
+    .contact-content h1 {
+      font-size: 26px;
+    }
+  
+    .con-para {
+      font-size: 16px;
+    }
+  
+    .con-para-head {
+      font-size: 20px;
+    }
+  
+    .get-in-touch {
+      font-size: 24px;
+    }
+  
+    .get-in-des {
+      font-size: 14px;
+    }
+  
+    .input, .textarea {
+      font-size: 14px;
+    }
+  
+    .social-icon {
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+    }
+  
+    .button {
+      font-size: 16px;
+    }
+  }
+  

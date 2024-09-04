@@ -1,0 +1,84 @@
+/* VideoPlayer.css */
+
+/* Container for the entire video page */
+.video-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Fixed navbar at the top with back button and title */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: gray;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure the navbar stays above other content */
+}
+
+/* Back button styling */
+.back-button {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+/* Course title styling */
+.navbar h2 {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Container for the video player and progress bar */
+.video-player-container {
+  position: relative;
+  width: 100%; 
+  max-width: 1200px; 
+  height: 500px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px; 
+}
+
+
+/* Ensure the video maintains a responsive aspect ratio */
+.react-player {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+}
+
+.video-player .react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Progress bar at the bottom of the video player */
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+}
+
+.progress {
+  height: 100%;
+  background: #007bff;
+  transition: width 0.2s ease;
+}
